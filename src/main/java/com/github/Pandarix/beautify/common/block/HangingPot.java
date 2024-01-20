@@ -165,24 +165,24 @@ public class HangingPot extends LanternBlock {
 	@Override
 	public void appendHoverText(ItemStack stack, BlockGetter getter, List<Component> component, TooltipFlag flag) {
 		if (!Screen.hasShiftDown() && !Screen.hasControlDown()) {
-			component.add(Component.literal("Hold SHIFT for more info.").withStyle(ChatFormatting.YELLOW));
-			component.add(Component.literal("Hold CTRL for a list of plants.").withStyle(ChatFormatting.YELLOW));
+			component.add(Component.literal("按住SHIFT以查看更多信息。").withStyle(ChatFormatting.YELLOW));
+			component.add(Component.literal("按住CTRL来查看植物列表。").withStyle(ChatFormatting.YELLOW));
 		}
 
 		if (Screen.hasShiftDown()) {
-			component.add(Component.literal("Can be placed hanging on blocks, Ropes or on ground as usual.")
+			component.add(Component.literal("可挂在方块、绳索上，也可像往常一样放在地面上。")
 					.withStyle(ChatFormatting.GRAY));
-			component.add(Component.literal("Right click with plants to pot them.").withStyle(ChatFormatting.GRAY));
+			component.add(Component.literal("使用植物右键点击，即可将其装入盆中。").withStyle(ChatFormatting.GRAY));
 			component.add(Component.literal(
-					"Right click with Bone Meal to grow the plant further. Trim with shears to shorten and recieve plant item.")
+					"使用骨粉右键点击，加速植物生长。用剪子修剪植物，使其变短并获得植物道具。")
 					.withStyle(ChatFormatting.GRAY));
 		}
 
 		if (Screen.hasControlDown()) {
-			component.add(Component.literal("Pottable plants:").withStyle(ChatFormatting.UNDERLINE)
+			component.add(Component.literal("可装盆的植物：").withStyle(ChatFormatting.UNDERLINE)
 					.withStyle(ChatFormatting.BOLD).withStyle(ChatFormatting.GRAY));
 			component.add(Component.literal(
-					"All normal flowers + Rose Bushes, Lilacs, Peonies, Sunflowers, Vines, Weeping Vines, Twisting Vines, Glow Lichen, Glow Berries, Sweet Berries, Grass, Fern")
+					"所有普通花卉 + 玫瑰丛、丁香、牡丹、向日葵、藤蔓、垂泪藤、缠怨藤、发光地衣、发光浆果、甜浆果、草、蕨")
 					.withStyle(ChatFormatting.GRAY));
 		}
 		super.appendHoverText(stack, getter, component, flag);

@@ -144,13 +144,13 @@ public class BookStack extends HorizontalDirectionalBlock {
 	@Override
 	public void appendHoverText(ItemStack stack, BlockGetter getter, List<Component> component, TooltipFlag flag) {
 		if (!Screen.hasShiftDown()) {
-			component.add(Component.literal("Hold SHIFT for more info.").withStyle(ChatFormatting.YELLOW));
+			component.add(Component.literal("按住SHIFT以查看更多信息。").withStyle(ChatFormatting.YELLOW));
 		}
 
 		if (Screen.hasShiftDown()) {
-			component.add(Component.literal("Places random Bookstack. Shift-Rightclick on block to change model.")
+			component.add(Component.literal("放置随机书堆。Shift右键点击方块可更改模型。")
 					.withStyle(ChatFormatting.GRAY));
-			component.add(Component.literal("Increases Enchantment Table power like shelves.")
+			component.add(Component.literal("像书架一样提高附魔台的附魔能力。")
 					.withStyle(ChatFormatting.GRAY));
 		}
 		super.appendHoverText(stack, getter, component, flag);
