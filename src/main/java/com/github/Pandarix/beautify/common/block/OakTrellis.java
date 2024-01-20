@@ -153,21 +153,21 @@ public class OakTrellis extends HorizontalDirectionalBlock {
 	@Override
 	public void appendHoverText(ItemStack stack, BlockGetter getter, List<Component> component, TooltipFlag flag) {
 		if (!Screen.hasShiftDown() && !Screen.hasControlDown()) {
-			component.add(Component.literal("Hold SHIFT for more info.").withStyle(ChatFormatting.YELLOW));
-			component.add(Component.literal("Hold CTRL for a list of plants.").withStyle(ChatFormatting.YELLOW));
+			component.add(Component.literal("按住SHIFT以查看更多信息。").withStyle(ChatFormatting.YELLOW));
+			component.add(Component.literal("按住CTRL来查看植物列表。").withStyle(ChatFormatting.YELLOW));
 		}
 
 		if (Screen.hasShiftDown()) {
-			component.add(Component.literal("Can be placed on or like walls and on the ceiling. Climbable.")
+			component.add(Component.literal("可放置在墙壁或类似墙壁的地方，也可放置在天花板上。可攀爬。")
 					.withStyle(ChatFormatting.GRAY));
-			component.add(Component.literal("Right click with plants to insert.").withStyle(ChatFormatting.GRAY));
+			component.add(Component.literal("使用植物右键点击以将其放入。").withStyle(ChatFormatting.GRAY));
 		}
 
 		if (Screen.hasControlDown()) {
-			component.add(Component.literal("Pottable plants:").withStyle(ChatFormatting.UNDERLINE)
+			component.add(Component.literal("可装盆的植物：").withStyle(ChatFormatting.UNDERLINE)
 					.withStyle(ChatFormatting.BOLD).withStyle(ChatFormatting.GRAY));
 			component.add(Component.literal(
-					"Rose Bushes, Sunflowers, Peonies, Lilacs, Vines, Weeping Vines, Twisting Vines, Glow Lichen")
+					"玫瑰丛、向日葵、牡丹、丁香、藤蔓、垂泪藤、缠怨藤、发光地衣")
 					.withStyle(ChatFormatting.GRAY));
 		}
 		super.appendHoverText(stack, getter, component, flag);

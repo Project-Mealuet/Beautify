@@ -95,13 +95,13 @@ public class OakPictureFrame extends HorizontalDirectionalBlock {
 	@Override
 	public void appendHoverText(ItemStack stack, BlockGetter getter, List<Component> component, TooltipFlag flag) {
 		if (!Screen.hasShiftDown()) {
-			component.add(Component.literal("Hold SHIFT for more info.").withStyle(ChatFormatting.YELLOW));
+			component.add(Component.literal("按住SHIFT以查看更多信息。").withStyle(ChatFormatting.YELLOW));
 		}
 
 		if (Screen.hasShiftDown()) {
-			component.add(Component.literal("Places Frame with a random motive.")
+			component.add(Component.literal("放置具有随机动效的框架。")
 					.withStyle(ChatFormatting.GRAY));
-			component.add(Component.literal("Shift-Rightclick on Block to change model.")
+			component.add(Component.literal("按住Shift右键单击方块，即可更改模型。")
 					.withStyle(ChatFormatting.GRAY));
 		}
 		super.appendHoverText(stack, getter, component, flag);

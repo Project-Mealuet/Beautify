@@ -291,14 +291,14 @@ public class OakBlinds extends HorizontalDirectionalBlock {
 	@Override
 	public void appendHoverText(ItemStack stack, BlockGetter getter, List<Component> component, TooltipFlag flag) {
 		if (!Screen.hasShiftDown()) {
-			component.add(Component.literal("Hold SHIFT for more info.").withStyle(ChatFormatting.YELLOW));
+			component.add(Component.literal("按住SHIFT以查看更多信息。").withStyle(ChatFormatting.YELLOW));
 		}
 
 		if (Screen.hasShiftDown()) {
-			component.add(Component.literal("Rightclick on Block to open or close blind and adjacent ones.")
+			component.add(Component.literal("右键单击方块可打开或关闭百叶窗。")
 					.withStyle(ChatFormatting.GRAY));
 			component.add(
-					Component.literal("After closing 1st time, blinds below topmost blind become invisible when open.")
+					Component.literal("第一次关闭后，最上层百叶窗以下的百叶窗在打开时会不可见。")
 							.withStyle(ChatFormatting.GRAY));
 		}
 		super.appendHoverText(stack, getter, component, flag);
